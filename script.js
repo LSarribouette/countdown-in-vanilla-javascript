@@ -32,6 +32,9 @@ function countDownEndOfYear() {
     }
 }
 
+/**
+ * Calculates the difference in days, hours, minutes and seconds between today and September 30th 2023
+ */
 function countDownEndOfSeptember() {
     let endOfSeptember = new Date(2023, 08, 30); //months start at zero...
     let today = new Date();
