@@ -29,6 +29,8 @@ function countDownEndOfYear() {
         document.querySelector('#hour-december').textContent = numberHours < 10 ? '0' + numberHours : numberHours;
         document.querySelector('#minute-december').textContent = numberMinutes < 10 ? '0' + numberMinutes : numberMinutes;
         document.querySelector('#second-december').textContent = numberSeconds < 10 ? '0' + numberSeconds : numberSeconds;
+    } else {
+        document.querySelector('.pyro').hidden = false;
     }
 }
 
