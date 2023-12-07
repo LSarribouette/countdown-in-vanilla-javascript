@@ -1,8 +1,8 @@
-countDownEndOfYear();
+countDownEndOfJanuary();
 countDownEndOfSeptember();
 (function loop() {
     setTimeout(() => {
-        countDownEndOfYear();
+        countDownEndOfJanuary();
         countDownEndOfSeptember();
 
         loop();
@@ -12,11 +12,11 @@ countDownEndOfSeptember();
 /**
  * Calculates the difference in days, hours, minutes and seconds between today and December 31st 2023
  */
-function countDownEndOfYear() {
-    let endOfYear = new Date(2023, 11, 31); //months start at zero...
+function countDownEndOfJanuary() {
+    let endOfJanuary = new Date(2024, 0, 31); //months start at zero...
     let today = new Date();
 
-    let totalNumberSeconds = (endOfYear - today) / 1000;
+    let totalNumberSeconds = (endOfJanuary - today) / 1000;
     // converts the result from milliseconds to seconds
 
     if (totalNumberSeconds > 0) {
@@ -25,10 +25,10 @@ function countDownEndOfYear() {
         let numberMinutes = Math.floor((totalNumberSeconds - (numberDays * 60 * 60 * 24 + numberHours * 60 * 60)) / 60);
         let numberSeconds = Math.floor(totalNumberSeconds - (numberDays * 60 * 60 * 24 + numberHours * 60 * 60 + numberMinutes * 60));
 
-        document.querySelector('#day-december').textContent = numberDays;
-        document.querySelector('#hour-december').textContent = numberHours < 10 ? '0' + numberHours : numberHours;
-        document.querySelector('#minute-december').textContent = numberMinutes < 10 ? '0' + numberMinutes : numberMinutes;
-        document.querySelector('#second-december').textContent = numberSeconds < 10 ? '0' + numberSeconds : numberSeconds;
+        document.querySelector('#day-january').textContent = numberDays;
+        document.querySelector('#hour-january').textContent = numberHours < 10 ? '0' + numberHours : numberHours;
+        document.querySelector('#minute-january').textContent = numberMinutes < 10 ? '0' + numberMinutes : numberMinutes;
+        document.querySelector('#second-january').textContent = numberSeconds < 10 ? '0' + numberSeconds : numberSeconds;
     } else {
         document.querySelector('.pyro').hidden = false;
     }
@@ -38,7 +38,7 @@ function countDownEndOfYear() {
  * Calculates the difference in days, hours, minutes and seconds between today and September 30th 2023
  */
 function countDownEndOfSeptember() {
-    let endOfSeptember = new Date(2023, 08, 30); //months start at zero...
+    let endOfSeptember = new Date(2023, 8, 30); //months start at zero...
     let today = new Date();
 
     let totalNumberSeconds = (endOfSeptember - today) / 1000;
